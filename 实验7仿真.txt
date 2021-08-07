@@ -1,0 +1,17 @@
+module sim(
+    output [6:0]out,
+    output [1:0] an
+    );
+    parameter clk_period = 10;
+        wire[7:0] data;
+        reg clk;
+        reg clr = 0;
+        initial
+        begin
+            clk = 0;
+            forever
+                #(clk_period/2) clk = ~clk;
+        end
+        com com0(clk, clr, data);
+        seg seg0(.InA(data),.OutA(out),.an(an));
+endmodule
