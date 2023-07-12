@@ -1,2 +1,4 @@
 # digitalLogicExperiment
-数字逻辑实验报告补档
+Experimental project of digital logic course in Jinan University
+
+数字逻辑实验报告
